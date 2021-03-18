@@ -9,6 +9,12 @@ import org.springframework.stereotype.Service;
 import com.aprender.course.entities.User;
 import com.aprender.course.repositories.UserRepository;
 
+
+/**
+ * 
+ * A anotação @Service te permite registrar um serviço na camada de serviço
+ * 
+ **/
 @Service
 public class UserService {
 

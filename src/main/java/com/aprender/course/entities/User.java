@@ -11,13 +11,27 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+/** Classe entidade de modelo de domínio
+ * 
+ * As anotações instruem JPA como sera a conversão dos 
+ * objetos para o modelo relacional.
+ * 
+ * A anotação (@Entity) é a especificação do JPA
+ * */
+
 @Entity
 @Table(name = "tb_user")
 public class User implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
+	// Anotação @Id especifica JPA que o atributo id será a chave primária
+	// da tabela do banco de dados
 	@Id
+	
+	// A chave numéria sera auto-incrementada no banco de dados
+	// para isso é necessário espericificar isso para JPA através da
+	// anotação (@GeneratedValue) 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;

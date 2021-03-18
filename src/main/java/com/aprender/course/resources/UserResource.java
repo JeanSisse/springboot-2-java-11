@@ -12,12 +12,30 @@ import org.springframework.web.bind.annotation.RestController;
 import com.aprender.course.entities.User;
 import com.aprender.course.services.UserService;
 
+/**
+ * Um controlador REST que responde no caminho (/users)
+ * 
+ * Para informar que esta classe é um recurso web que é implementado
+ * por um controlador REST precisamos colocar a anotação (@RestController)
+ * 
+ * Para nomear o seu recurso utiliza-se a anotação (@RequestMapping("/users")) com
+ * o nome do caminho do recurso
+ * 
+ * */
+
 @RestController
 @RequestMapping("/users")
 public class UserResource {
 
 	@Autowired
 	private UserService service;
+	
+	// Um end point para acessar os usuários
+	// ResponseEntity é um tipo especifico do spring para retornar resposta
+	// de requisições web
+	//
+	// @GetMapping é uma anotação para indicar que o método ResponseEntity responde
+	// a requisição do tipo get do http
 	
 	@GetMapping
 	public ResponseEntity<List<User>> findAll(){
