@@ -2,9 +2,9 @@
 
 # Web services com Spring Boot e JPA/Hibernate
 
-# "Banco de dados" H2 incorporado neste projeto
+"Banco de dados" H2 incorporado neste projeto
 
-# Objetivos:
+Neste projeto iremos:
  * Criar projeto Spring Boot Java
  * Implementar modelo de domínio
  * Estruturar camadas lógicas: resource, service e repository
@@ -13,7 +13,7 @@
  * CRUD = Create, Retrive, Update, Delete
  * Tratamento de exceções
 
-# Alcançados:
+Alcançados:
     * Criar projeto Spring Boot Java
     * Implementar modelo de domínio
     * Estruturar camadas lógicas: resource, service e repository
