@@ -8,8 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "tab_product")
@@ -27,7 +29,21 @@ public class Product implements Serializable{
 	
 	// Solução provisória que impede que o JPA tente interpretar o atributo categories
 	// pois o JPA não esta reconhecendo o tipo Set;
-	@Transient
+	//@Transient
+	
+	@JsonIgnore
+	// Ligação com a coleção que tem na classe Category
+	@ManyToMany(mappedBy = "products")
+	
+	
+	/**
+	 * @JoinTable(tableName, chave estrangeira para associação)
+	 * */
+//	@JoinTable(name = "tb_product_category", joinColumns = @JoinColumn(name = "product_id"),
+//	inverseJoinColumns = @JoinColumn(name = "category_id"))
+	
+	// Mapeamento para transoformar essa coleção numa tabela de associação
+	//@ManyToMany
 	private Set<Category> categories = new HashSet<>();
 	
 	public Product() {}

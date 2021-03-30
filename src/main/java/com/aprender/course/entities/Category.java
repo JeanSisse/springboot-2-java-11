@@ -8,8 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
 @Table(name = "tab_category")
@@ -28,7 +30,18 @@ public class Category implements Serializable{
 	private Long Id;
 	private String name;
 	
-	@Transient
+	
+	// Mapeamento para transoformar essa coleção numa tabela de associação
+	@ManyToMany
+	
+	/**
+	 * @JoinTable(tableName, chave estrangeira para associação)
+	 * */
+	@JoinTable(name = "tb_category_product", joinColumns = @JoinColumn(name = "category_id"),
+	inverseJoinColumns = @JoinColumn(name = "product_id"))
+	
+	// Ligação com a coleção que tem na classe Products
+	// @ManyToMany(mappedBy = "categories")
 	private Set<Product> products = new HashSet<>();
 	
 	public Category() {}
