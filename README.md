@@ -6,7 +6,7 @@
 
 Neste projeto iremos:
  * Criar projeto Spring Boot Java
- * Implementar modelo de domínio
+ * Implementar modelo de domínio (entidades do seu négocio)
  * Estruturar camadas lógicas: resource, service e repository
  * Configurar banco de dados de teste (H2)
  * Povoar o banco de dados
