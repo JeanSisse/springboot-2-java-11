@@ -14,8 +14,8 @@ Neste projeto iremos:
  * Tratamento de exceções
 
 Alcançados:
-    * Criar projeto Spring Boot Java
-    * Implementar modelo de domínio
-    * Estruturar camadas lógicas: resource, service e repository
-    * Configurar banco de dados de teste (H2)
-    * Povoar o banco de dados
+   * Criar projeto Spring Boot Java
+   * Implementar modelo de domínio
+   * Estruturar camadas lógicas: resource, service e repository
+   * Configurar banco de dados de teste (H2)
+   * Povoar o banco de dados
