@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -54,7 +55,7 @@ public class UserResource {
 	}
 	
 	/**
-	 * Meto para inserir recurso no banco de dados
+	 * End-point para inserir recurso no banco de dados
 	 * 
 	 * Para descerializar o objeto que vai chegar em formato Json 
 	 * no request usa-se anotação @RequestBody
@@ -71,4 +72,34 @@ public class UserResource {
 		
 		return ResponseEntity.created(uri).body(obj);
 	}
+	
+	@DeleteMapping(value = "/{id}")
+	public ResponseEntity<Void> delete(@PathVariable Long id){
+		service.delete(id);
+		return ResponseEntity.noContent().build();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
