@@ -37,4 +37,19 @@ public class UserService {
 	public void delete (Long id) {
 		repository.deleteById(id);
 	}
+	
+	public User update(Long id, User obj) {
+		// getOne(id) Returns a reference to the entity with the given identifier. 
+		// getOne() instancia uma referência que será utilizado para atualizar
+		// o DB
+		User entity = repository.getOne(id);
+		updateData(entity, obj);
+		return repository.save(entity);
+	}
+
+	private void updateData(User entity, User obj) {
+		entity.setName(obj.getName());
+		entity.setEmail(obj.getEmail());
+		entity.setPhone(obj.getPhone());
+	}
 }
