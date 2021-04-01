@@ -19,3 +19,5 @@ Alcançados:
    * Estruturar camadas lógicas: resource, service e repository
    * Configurar banco de dados de teste (H2)
    * Povoar o banco de dados
+   * CRUD = Create, Retrive, Update, Delete
+   * Tratamento de exceções
