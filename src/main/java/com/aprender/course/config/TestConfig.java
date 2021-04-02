@@ -66,6 +66,13 @@ public class TestConfig implements CommandLineRunner{
 		Product p3 = new Product(null, "Mackbook Pro", "Lorem ipsum dolor sit amet", 12000.00, "");
 		Product p4 = new Product(null, "PC Gamer", "Lorem ipsum dolor sit amet", 2000.00, "");
 		Product p5 = new Product(null, "Rails for Dummies", "Lorem ipsum dolor sit amet", 125.00, "");
+
+		//		{
+//			"name": "The Lord of the Rings\", \"Lorem ipsum dolor sit amet",
+//			"description": "Lorem ipsum dolor sit amet",
+//			"price": "12.00",
+//			"imgUrl": ""
+//		}
 		
 		categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
 		productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
