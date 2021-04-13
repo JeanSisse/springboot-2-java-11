@@ -4,7 +4,7 @@
 
 "Banco de dados" H2 incorporado neste projeto
 
-Neste projeto iremos:
+## Neste projeto iremos:
  * Criar projeto Spring Boot Java
  * Implementar modelo de domínio (entidades do seu négocio)
  * Estruturar camadas lógicas: resource, service e repository
@@ -13,7 +13,7 @@ Neste projeto iremos:
  * CRUD = Create, Retrive, Update, Delete
  * Tratamento de exceções
 
-Alcançados:
+## Alcançados:
   * Criar projeto Spring Boot Java
   * Implementar modelo de domínio
   * Estruturar camadas lógicas: resource, service e repository
@@ -23,11 +23,11 @@ Alcançados:
   * Tratamento de exceções
    
    
-Link para testar aplicação em produção:
+## Link para testar aplicação em produção:
 	* Deploy feito no Heroku
 	* https://springboot-2-java11.herokuapp.com
 	
-Ferramenta para teste:
+## Ferramenta para teste:
 	* Foi utilizada a ferramenta Postman para execução de testes
 	* Os dados são inseridos no formato Json
 	* No momento, apenas inserção de user esta operando
